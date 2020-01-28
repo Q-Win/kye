@@ -1,0 +1,26 @@
+<h1>Welcome</h1>
+
+
+  <%= form_tag do %>
+    <div>
+      <%= select_tag "champ1", options_for_select(@champ_names) %>
+    </div>
+    <br/>
+    <div>
+      <%= select_tag "champ2", options_for_select(@champ_names) %>
+    </div>
+    <br/>
+    <div>
+      <%= select_tag "champ3", options_for_select(@champ_names) %>
+    </div>
+    <br/>
+    <div>
+      <%= select_tag "champ4", options_for_select(@champ_names) %>
+    </div>
+    <br/>
+    <div>
+      <%= select_tag "champ5", options_for_select(@champ_names) %>
+    </div>
+    <br/>
+    <%= submit_tag "Enter" %>
+  <%end%>
