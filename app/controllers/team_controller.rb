@@ -10,7 +10,6 @@ class TeamController < ApplicationController
     @champ_3 = champ_data(params[:champ3])
     @champ_4 = champ_data(params[:champ4])
     @champ_5 = champ_data(params[:champ5])
-    binding.pry
   end
 
   private
@@ -30,7 +29,7 @@ class TeamController < ApplicationController
       Faraday.new(url: url).get
     end
 
-    JSON.parse(conn(champ_name).body, symbolize_names: true)
+    JSON.parse(conn(champ_name).body, symbolize_names: true)[:data]
   end
 
 end
