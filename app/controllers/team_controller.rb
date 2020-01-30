@@ -4,6 +4,10 @@ class TeamController < ApplicationController
     @champ_names = champ_names
   end
 
+  def enemy
+    binding.pry
+  end
+
   private
 
   def champ_names

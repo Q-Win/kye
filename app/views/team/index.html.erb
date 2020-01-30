@@ -1,7 +1,7 @@
 <h1>Welcome</h1>
 
 
-  <%= form_tag do %>
+  <%= form_tag('/enemy', :method => "get") do %>
     <div>
       <%= select_tag "champ1", options_for_select(@champ_names) %>
     </div>
