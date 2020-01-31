@@ -9,9 +9,11 @@
     <div><%=spell[:id][-1]%></div>
     <div><%=spell[:name]%></div>
     <div>
-      <%spell[:cooldown].each do |cooldown|%>
-        <p><%=cooldown%></p>
-      <%end%>
+      <p>
+        <%spell[:cooldown].each do |cooldown|%>
+          <%=cooldown%>, 
+        <%end%>
+    </p>
     </div>
     <%end%>
 </div>
