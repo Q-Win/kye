@@ -3,6 +3,19 @@
   <div><%=tip%></div>
 <%end%>
 
+<br/>
+<div>
+  <% @champ_1[@champ_1.keys[0]][:spells].each do |spell|%>
+    <div><%=spell[:id][-1]%></div>
+    <div><%=spell[:name]%></div>
+    <div>
+      <%spell[:cooldown].each do |cooldown|%>
+        <p><%=cooldown%></p>
+      <%end%>
+    </div>
+    <%end%>
+</div>
+
 <h1><%= @champ_2.keys[0] %> </h1>
 <% @champ_2[@champ_2.keys[0]][:enemytips].each do |tip|%>
   <div><%=tip%></div>
